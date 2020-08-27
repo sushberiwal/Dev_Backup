@@ -3,7 +3,7 @@ let fs = require("fs");
 let cheerio = require("cheerio");
 
 
-let content = fs.readFileSync("./index.html" , "utf8");
+let content = fs.readFileSync("index.html" , "utf8");
 
 let ch = cheerio.load(content);
 
@@ -13,6 +13,7 @@ let imgKaData = ch("img").attr("src");
 
 // let pKaData = ch("ul li p").text();
 // console.log(pKaData);
+
 
 // classes and id ?
 let pKaData = ch(".pa.main").text();
